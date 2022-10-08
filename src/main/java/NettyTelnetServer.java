@@ -11,8 +11,9 @@ public class NettyTelnetServer {
 
     // 指定端口号
     private static final int PORT = 8888;
+    //ServerBootstrap是Socket服务端启动类。通过这个类的实例，用户可以创建对应的服务端程序。
     private ServerBootstrap serverBootstrap;
-
+    //NioEventLoopGroup对应一个被封装好的NIO线程池，bossGroup负责收集客户端连接，workerGroup负责处理每个连接的IO读写。
     private EventLoopGroup bossGroup = new NioEventLoopGroup(1);
     private EventLoopGroup workerGroup = new NioEventLoopGroup();
 
